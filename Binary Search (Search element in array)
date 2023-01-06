@@ -1,0 +1,18 @@
+def binarySearch(array,element):          // this code will search a number in an array and tell you its index
+    start = 0
+    end   = len(array)-1
+
+    while start <= end:
+        middle = (start + end) // 2
+        if element == array[middle]:
+            return "Your values is at index" , middle
+        elif element < array[middle]:
+            end = middle - 1
+        else:
+            start = middle + 1
+        
+    return -1
+    
+array = [12,34,45,56,67,89]
+n= 121
+binarySearch(array,n)
